@@ -1,4 +1,4 @@
-package com.sid.microservice.entities.web;
+package com.sid.microservice.web;
 
 import com.sid.microservice.entities.Compte;
 import com.sid.microservice.repositories.CompteRepository;

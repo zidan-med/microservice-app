@@ -1,8 +1,7 @@
 package com.sid.microservice;
 
-import com.sid.microservice.entities.web.CompteRestJaxRSAPI;
+import com.sid.microservice.web.CompteRestJaxRSAPI;
 import org.glassfish.jersey.server.ResourceConfig;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 //deploiment de jersey
 @Configuration

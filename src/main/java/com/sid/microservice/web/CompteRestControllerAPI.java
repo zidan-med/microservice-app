@@ -1,17 +1,16 @@
-package com.sid.microservice.entities.web;
+package com.sid.microservice.web;
 
 import com.sid.microservice.entities.Compte;
 import com.sid.microservice.repositories.CompteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
 
 //Rest controller API
-@RestController
+//@RestController
 //url(path) de base
 @RequestMapping("/banque")
 public class CompteRestControllerAPI {
@@ -33,7 +32,7 @@ public class CompteRestControllerAPI {
         return compteRepository.save(compte);
     }
     @PutMapping("/comptes/{id}")
-    public Compte update(@RequestBody// Compte compte,@PathVariable(value = "id") Long id){
+    public Compte update(@RequestBody Compte compte,@PathVariable(value = "id") Long id){
         compte.setId(id);
         return compteRepository.save(compte);
     }
