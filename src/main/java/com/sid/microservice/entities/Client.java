@@ -13,6 +13,7 @@ public class Client {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "client",fetch = FetchType.LAZY)
+    //LAZZY:quand en demande de charger un client il ne charger pas aussi les comptes liee a ce client
+    @OneToMany(mappedBy = "client")
     private Collection<Compte> comptes;
 }

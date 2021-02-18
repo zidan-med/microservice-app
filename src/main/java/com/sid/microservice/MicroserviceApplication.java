@@ -39,7 +39,7 @@ public class MicroserviceApplication {
             compteRepository.save(new Compte(null,Math.random()*5000,new Date(), TypeCompte.COURANT,c2));
             compteRepository.save(new Compte(null,Math.random()*5000,new Date(), TypeCompte.EPARGNE,c3));
             compteRepository.findAll().forEach(c ->{
-                System.out.println(c);
+                System.out.println(c.getSolde());
             });
         };
     }
